@@ -199,6 +199,10 @@ vim.keymap.set('n', '<down>', '<cmd>echo "Use j to move!!"<CR>')
 -- In insert mode, jk will return to Normal mode
 vim.keymap.set('i', 'jk', '<Esc>', { noremap = false })
 
+-- In normal mode, <leader>ex/vex will open netrw
+vim.keymap.set('n', '<leader>ex', '<cmd>Ex<CR>')
+vim.keymap.set('n', '<leader>vex', '<cmd>Vex<CR>')
+
 -- Keybinds to make split navigation easier.
 --  Use CTRL+<hjkl> to switch between windows
 --
@@ -721,6 +725,7 @@ require('lazy').setup({
             },
           },
         },
+        csharp_ls = {},
       }
 
       -- Ensure the servers and tools above are installed
